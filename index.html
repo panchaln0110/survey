@@ -1,0 +1,1527 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>Customer Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            const FORM_TIME_START = Math.floor((new Date).getTime() / 1000);
+            let formElement = document.getElementById("tfa_0");
+            let appendJsTimerElement = function() {
+                let formTimeDiff = Math.floor((new Date).getTime() / 1000) - FORM_TIME_START;
+                let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+                if (null !== cumulatedTimeElement) {
+                    let cumulatedTime = parseInt(cumulatedTimeElement.value);
+                    if (null !== cumulatedTime && cumulatedTime > 0) {
+                        formTimeDiff += cumulatedTime;
+                    }
+                }
+                let jsTimeInput = document.createElement("input");
+                jsTimeInput.setAttribute("type", "hidden");
+                jsTimeInput.setAttribute("value", formTimeDiff.toString());
+                jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+                jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+                jsTimeInput.setAttribute("autocomplete", "off");
+                if (null !== formElement) {
+                    formElement.appendChild(jsTimeInput);
+                }
+            };
+            if (null !== formElement) {
+                if (formElement.addEventListener) {
+                    formElement.addEventListener('submit', appendJsTimerElement, false);
+                } else if (formElement.attachEvent) {
+                    formElement.attachEvent('onsubmit', appendJsTimerElement);
+                }
+            }
+        });
+
+    </script>
+
+    <link href="https://acn.tfaforms.net/form-builder/4.4.0/css/wforms-layout.css?v=4615-2" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]>
+    <link href="https://acn.tfaforms.net/form-builder/4.4.0/css/wforms-layout-ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link href="https://acn.tfaforms.net/form-builder/4.4.0/css/wforms-layout-ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <link href="https://acn.tfaforms.net/form-builder/4.4.0/css/wforms-layout-ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link href="https://acn.tfaforms.net/themes/get/default" rel="stylesheet" type="text/css" />
+    <link href="https://acn.tfaforms.net/form-builder/4.4.0/css/wforms-jsonly.css?v=4615-2" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    <script type="text/javascript" src="https://acn.tfaforms.net/wForms/3.10/js/wforms.js?v=4615-2"></script>
+    <script type="text/javascript">
+        wFORMS.behaviors.prefill.skip = false;
+
+    </script>
+    <script type="text/javascript" src="https://acn.tfaforms.net/wForms/3.10/js/localization-en_US.js?v=4615-2"></script>
+    <link href="https://acn.tfaforms.net/font/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="customersurvey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="default wFormWebPage">
+    <div id="tfaContent">
+        <div class="wFormContainer">
+            <style type="text/css">
+
+
+            </style>
+            <div class="">
+                <div class="wForm" id="tfa_0-WRPR" dir="ltr">
+                    <div class="codesection" id="code-tfa_0">
+                    </div>
+                    <h3 class="wFormTitle" id="tfa_0-T">Customer Survey</h3>
+                    <form method="post" action="https://acn.tfaforms.net/responses/processor" class="hintsBelow labelsAbove" id="tfa_0">
+                        <div class="wfPage" id="wfPgIndex-1">
+                            <div class="progressbar" style="background-color:rgb(197, 216, 238);">
+                                <div class="progress">
+                                    <ol class="progress_list">
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text" style="font-weight: bold;">1</span>
+                                            </span>
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text">2</span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text">3</span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text">4</span>
+                                            </span>
+
+                                        </li>
+                                    </ol>
+                                    <div class="progress_bar progress_bar_x_small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar">
+                                        <span class="progress_bar_value" style="width: 0%;">
+                   </span>
+                                    </div>
+                                </div>
+                                <div class="flex-container">
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text1">Contact Details</span>
+                                        <div class="arrow1"></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text2">Select Services</span>
+                                        <div></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text3">My Selections</span>
+                                        <div></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text4">Confirm</span>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section pageSection" id="tfa_303">
+                                <!--  <h4 id="tfa_303-T">Page 1</h4>-->
+                                <div class="oneField field-container-D    " id="tfa_8-D" role="group" aria-required="true" aria-labelledby="tfa_8-L">
+                                    <label id="tfa_8-L" for="tfa_8" class="label preField reqMark">Are you interested in learning more about our residential or business services?</label><br>
+                                    <div class="inputWrapper"><span id="tfa_8" class="choices horizontal required"><span class="oneChoice maskControl"><input type="radio" value="tfa_9" class="" id="tfa_9" name="tfa_8" data-conditionals="#tfa_538,#tfa_320,#tfa_326,#tfa_349,#tfa_439,#tfa_353,#tfa_354,#tfa_401,#tfa_336,#tfa_422,#tfa_430,#tfa_521,#tfa_753,#tfa_773,#tfa_848,#tfa_839"><label class="label postField" id="tfa_9-L" for="tfa_9">Residential</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_10" class="" id="tfa_10" name="tfa_8" data-conditionals="#tfa_2,#tfa_301,#tfa_553,#tfa_554,#tfa_542,#tfa_546,#tfa_573,#tfa_579,#tfa_586,#tfa_711,#tfa_748,#tfa_764,#tfa_521,#tfa_753,#tfa_773,#tfa_699,#tfa_779,#tfa_876,#tfa_690"><label class="label postField" id="tfa_10-L" for="tfa_10">Business</label></span></span>
+                                    </div>
+                                </div>
+                                <div id="tfa_1" class="section group">
+                                    <div class="oneField field-container-D    " id="tfa_2-D">
+                                        <label id="tfa_2-L" for="tfa_2" class="label preField reqMark">Company Name</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_2" name="tfa_2" value="" placeholder="" aria-required="true" data-condition="`#tfa_10`" title="Company Name" class="required choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_549-D">
+                                        <label id="tfa_549-L" for="tfa_549" class="label preField reqMark">First Name</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_549" name="tfa_549" value="" placeholder="" aria-required="true" title="First Name" class="required choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_3-D">
+                                        <label id="tfa_3-L" for="tfa_3" class="label preField reqMark">Last Name</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_3" name="tfa_3" value="" placeholder="" aria-required="true" title="Last Name" class="required choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_4-D">
+                                        <label id="tfa_4-L" for="tfa_4" class="label preField reqMark">Email</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_4" name="tfa_4" value="" placeholder="" aria-required="true" title="Email" class="required choicesuni"></div>
+                                    </div>
+                                    <div id="tfa_325" class="section inline group">
+                                        <div class="oneField field-container-D    " id="tfa_11-D">
+                                            <label id="tfa_11-L" for="tfa_11" class="label preField reqMark">Country</label><br>
+                                            <div class="inputWrapper"><select id="tfa_11" name="tfa_11" title="Country" aria-required="true" class="required choicesuni2"><option value="">Please select...</option>
+                                                <option value="tfa_853" id="tfa_853" data-conditionals="#tfa_509,#tfa_305,#tfa_534,#tfa_375,#tfa_782,#tfa_839,#tfa_699,#tfa_690" class="">United States</option>
+                                                <option value="tfa_854" id="tfa_854" data-conditionals="#tfa_856,#tfa_521,#tfa_562,#tfa_753,#tfa_773,#tfa_859,#tfa_848,#tfa_779,#tfa_876" class="">Canada</option></select></div>
+                                        </div>
+                                        <div class="oneField field-container-D    " id="tfa_782-D">
+                                            <label id="tfa_782-L" for="tfa_782" class="label preField reqMark">State</label><br>
+                                            <div class="inputWrapper"><select id="tfa_782" name="tfa_782" data-condition="`#tfa_853`" title="State" aria-required="true" class="calc-states required choicesuni2"><option value="">Please select...</option>
+                                            <option value="tfa_783" id="tfa_783" class="calcval-AL">AL</option>
+                                            <option value="tfa_784" id="tfa_784" class="calcval-AK">AK</option>
+                                            <option value="tfa_785" id="tfa_785" class="calcval-AZ">AZ</option>
+                                            <option value="tfa_786" id="tfa_786" class="calcval-AR">AR</option>
+                                            <option value="tfa_787" id="tfa_787" class="calcval-CA">CA</option>
+                                            <option value="tfa_788" id="tfa_788" class="calcval-CO">CO</option>
+                                            <option value="tfa_789" id="tfa_789" class="calcval-CT">CT</option>
+                                            <option value="tfa_790" id="tfa_790" class="calcval-DE">DE</option>
+                                            <option value="tfa_791" id="tfa_791" class="calcval-DC">DC</option>
+                                            <option value="tfa_792" id="tfa_792" class="calcval-FL">FL</option>
+                                            <option value="tfa_793" id="tfa_793" class="calcval-GA">GA</option>
+                                            <option value="tfa_794" id="tfa_794" class="calcval-HI">HI</option>
+                                            <option value="tfa_795" id="tfa_795" class="calcval-ID">ID</option>
+                                            <option value="tfa_796" id="tfa_796" class="calcval-IL">IL</option>
+                                            <option value="tfa_797" id="tfa_797" class="calcval-IN">IN</option>
+                                            <option value="tfa_798" id="tfa_798" class="calcval-IA">IA</option>
+                                            <option value="tfa_799" id="tfa_799" class="calcval-KS">KS</option>
+                                            <option value="tfa_800" id="tfa_800" class="calcval-KY">KY</option>
+                                            <option value="tfa_801" id="tfa_801" class="calcval-LA">LA</option>
+                                            <option value="tfa_802" id="tfa_802" class="calcval-ME">ME</option>
+                                            <option value="tfa_803" id="tfa_803" class="calcval-MD">MD</option>
+                                            <option value="tfa_804" id="tfa_804" class="calcval-MA">MA</option>
+                                            <option value="tfa_805" id="tfa_805" class="calcval-MI">MI</option>
+                                            <option value="tfa_806" id="tfa_806" class="calcval-MN">MN</option>
+                                            <option value="tfa_807" id="tfa_807" class="calcval-MS">MS</option>
+                                            <option value="tfa_808" id="tfa_808" class="calcval-MO">MO</option>
+                                            <option value="tfa_809" id="tfa_809" class="calcval-MT">MT</option>
+                                            <option value="tfa_810" id="tfa_810" class="calcval-NE">NE</option>
+                                            <option value="tfa_811" id="tfa_811" class="calcval-NV">NV</option>
+                                            <option value="tfa_812" id="tfa_812" class="calcval-NH">NH</option>
+                                            <option value="tfa_813" id="tfa_813" class="calcval-NJ">NJ</option>
+                                            <option value="tfa_814" id="tfa_814" class="calcval-NM">NM</option>
+                                            <option value="tfa_815" id="tfa_815" class="calcval-NY">NY</option>
+                                            <option value="tfa_816" id="tfa_816" class="calcval-NC">NC</option>
+                                            <option value="tfa_817" id="tfa_817" class="calcval-ND">ND</option>
+                                            <option value="tfa_818" id="tfa_818" class="calcval-OH">OH</option>
+                                            <option value="tfa_819" id="tfa_819" class="calcval-OK">OK</option>
+                                            <option value="tfa_820" id="tfa_820" class="calcval-OR">OR</option>
+                                            <option value="tfa_821" id="tfa_821" class="calcval-PA">PA</option>
+                                            <option value="tfa_822" id="tfa_822" class="calcval-RI">RI</option>
+                                            <option value="tfa_823" id="tfa_823" class="calcval-SC">SC</option>
+                                            <option value="tfa_824" id="tfa_824" class="calcval-SD">SD</option>
+                                            <option value="tfa_825" id="tfa_825" class="calcval-TN">TN</option>
+                                            <option value="tfa_826" id="tfa_826" class="calcval-TX">TX</option>
+                                            <option value="tfa_827" id="tfa_827" class="calcval-UT">UT</option>
+                                            <option value="tfa_828" id="tfa_828" class="calcval-VT">VT</option>
+                                            <option value="tfa_829" id="tfa_829" class="calcval-VA">VA</option>
+                                            <option value="tfa_830" id="tfa_830" class="calcval-WA">WA</option>
+                                            <option value="tfa_831" id="tfa_831" class="calcval-WV">WV</option>
+                                            <option value="tfa_832" id="tfa_832" class="calcval-WI">WI</option>
+                                            <option value="tfa_833" id="tfa_833" class="calcval-WY">WY</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="oneField field-container-D    " id="tfa_859-D">
+                                            <label id="tfa_859-L" for="tfa_859" class="label preField reqMark">Province</label><br>
+                                            <div class="inputWrapper"><select id="tfa_859" name="tfa_859" data-condition="`#tfa_854`" title="Province" aria-required="true" class="calc-provinces required choicesuni2"><option value="">Please select...</option>
+                                                <option value="tfa_860" id="tfa_860" class="calcval-AB">AB</option>
+                                                <option value="tfa_861" id="tfa_861" class="calcval-BC">BC</option>
+                                                <option value="tfa_862" id="tfa_862" class="calcval-MB">MB</option>
+                                                <option value="tfa_863" id="tfa_863" class="calcval-NB">NB</option>
+                                                <option value="tfa_864" id="tfa_864" class="calcval-NL">NL</option>
+                                                <option value="tfa_865" id="tfa_865" class="calcval-NS">NS</option>
+                                                <option value="tfa_866" id="tfa_866" class="calcval-NT">NT</option>
+                                                <option value="tfa_867" id="tfa_867" class="calcval-NU">NU</option>
+                                                <option value="tfa_868" id="tfa_868" class="calcval-ON">ON</option>
+                                                <option value="tfa_869" id="tfa_869" class="calcval-PE">PE</option>
+                                                <option value="tfa_870" id="tfa_870" class="calcval-QC">QC</option>
+                                                <option value="tfa_871" id="tfa_871" class="calcval-SK">SK</option>
+                                                <option value="tfa_872" id="tfa_872" class="calcval-YT">YT</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="oneField field-container-D    " id="tfa_513-D">
+                                            <label id="tfa_513-L" for="tfa_513" class="label preField ">Zip/Postal Code</label><br>
+                                            <div class="inputWrapper"><input type="text" id="tfa_513" name="tfa_513" value="" placeholder="" title="Zip/Postal Code" class="choicesuni"></div>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_5-D" role="group" aria-labelledby="tfa_5-L">
+                                        <div class="adjust" style="float: left"><label id="tfa_5-L" for="tfa_5" class="label preField preprefield ">Is this the location where you will be receiving ACN Services?</label>
+                                        </div>
+                                        <div class="form-element">
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_6" name="tfa_5" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                                                <span class = "slds-checkbox_on">Yes</span>
+                                                            <span class = "slds-checkbox_off">No</span>
+                                                              </span>
+                                                            </span>
+                                                          </span>
+                                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_301-D">
+                                        <label id="tfa_301-L" for="tfa_301" class="label preField ">Business Phone</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_301" name="tfa_301" value="" placeholder="" data-condition="`#tfa_10`" title="Business Phone" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_551-D">
+                                        <label id="tfa_551-L" for="tfa_551" class="label preField ">Mobile Phone</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_551" name="tfa_551" value="" placeholder="" title="Mobile Phone" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D   hintsSide " id="tfa_553-D">
+                                        <label id="tfa_553-L" for="tfa_553" class="label preField ">How long have you been in business?</label><br>
+                                        <div class="inputWrapper">
+                                            <input type="text" id="tfa_553" name="tfa_553" value="" placeholder="" aria-describedby="tfa_553-HH" data-condition="`#tfa_10`" title="How long have you been in business?" class="choicesuni"><span class="field-hint-inactive" id="tfa_553-H"><span id="tfa_553-HH" class="hint">Years/Months</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D    " id="tfa_554-D" role="group" aria-labelledby="tfa_554-L">
+                                    <label id="tfa_554-L" for="tfa_554" class="label preField ">Do you rent or own your office space?</label><br>
+                                    <div class="inputWrapper"><span id="tfa_554" class="choices horizontal " data-condition="`#tfa_10`"><span class="oneChoice maskControl"><input type="radio" value="tfa_555" class="" id="tfa_555" name="tfa_554"><label class="label postField" id="tfa_555-L" for="tfa_555">Rent</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_556" class="" id="tfa_556" name="tfa_554"><label class="label postField" id="tfa_556-L" for="tfa_556">Own</label></span></span>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D    " id="tfa_302-D">
+                                    <label id="tfa_302-L" for="tfa_302" class="label preField ">Referring IBO Business ID</label><br>
+                                    <div class="inputWrapper"><input type="text" id="tfa_302" name="tfa_302" value="" placeholder="" title="Referring IBO Business ID" class="choicesuni"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wfPage" id="wfPgIndex-2">
+                            <div class="progressbar" style="background-color:rgb(197, 216, 238); ">
+                                <div class="progress">
+                                    <ol class="progress_list">
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text" style="font-weight: bold;">2</span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text">3</span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text">4</span>
+                                            </span>
+
+                                        </li>
+                                    </ol>
+                                    <div class="progress_bar progress_bar_x_small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar">
+                                        <span class="progress_bar_value" style="width: 0%;">
+                   </span>
+                                    </div>
+                                </div>
+                                <div class="flex-container">
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text1">Contact Details</span>
+                                        <div></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text2">Select Services</span>
+                                        <div class="arrow2"></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text3">My Selections</span>
+                                        <div></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text4">Confirm</span>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section pageSection" id="tfa_304">
+                                <!--<h4 id="tfa_304-T">Select Services</h4>-->
+                                <div class="htmlSection" id="tfa_309">
+                                    <div class="htmlContent" id="tfa_309-HTML">Please select the service you're interested in learning more about... <b>&lt;Name&gt; </b>... <i>The survey will take less than 5 minutes.</i></div>
+                                </div>
+                                <div class="oneField field-container-D  labelsRemoved  maindiv" id="tfa_305-D" role="group" aria-labelledby="tfa_305-L">
+                                    <div class="inputWrapper"><span id="tfa_305" class="choices horizontal " data-condition="`#tfa_853`"><span class="oneChoice maskControl"><input type="checkbox" value="tfa_306" class="" id="tfa_306" name="tfa_306" data-conditionals="#tfa_313"><label class="label postField mainsubdiv" id="tfa_306-L" for="tfa_306"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i><br>Wireless</label></span></span>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D  labelsRemoved  maindiv" id="tfa_534-D" role="group" aria-labelledby="tfa_534-L">
+                                    <div class="inputWrapper"><span id="tfa_534" class="choices horizontal " data-condition="`#tfa_853`"><span class="oneChoice maskControl"><input type="checkbox" value="tfa_535" class="" id="tfa_535" name="tfa_535" data-conditionals="#tfa_347"><label class="label postField mainsubdiv" id="tfa_535-L" for="tfa_535"><i class="fa fa-television fa-2x" aria-hidden="true"></i><br>Television</label></span></span>
+                                    </div>
+                                </div>
+
+                                <div class="oneField field-container-D  labelsRemoved maindiv " id="tfa_530-D" role="group" aria-labelledby="tfa_530-L">
+                                    <div class="inputWrapper"><span id="tfa_530" class="choices horizontal "><span class="oneChoice maskControl"><input type="checkbox" value="tfa_531" class="" id="tfa_531" name="tfa_531" data-conditionals="#tfa_336,#tfa_711"><label class="label postField mainsubdiv" id="tfa_531-L" for="tfa_531"><i class="fa fa-lock fa-2x" aria-hidden="true"></i><br>Security &amp; Automation</label></span></span>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D  labelsRemoved  maindiv" id="tfa_526-D" role="group" aria-labelledby="tfa_526-L">
+                                    <div class="inputWrapper"><span id="tfa_526" class="choices horizontal "><span class="oneChoice maskControl"><input type="checkbox" value="tfa_527" class="" id="tfa_527" name="tfa_527" data-conditionals="#tfa_346"><label class="label postField mainsubdiv" id="tfa_527-L" for="tfa_527"><i class="fa fa-power-off fa-2x" aria-hidden="true"></i><br>Energy</label></span></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="oneField field-container-D  labelsRemoved maindiv " id="tfa_542-D" role="group" aria-labelledby="tfa_542-L">
+                                    <div class="inputWrapper"><span id="tfa_542" class="choices horizontal " data-condition="`#tfa_10`"><span class="oneChoice maskControl"><input type="checkbox" value="tfa_543" class="" id="tfa_543" name="tfa_543" data-conditionals="#tfa_618"><label class="label postField mainsubdiv" id="tfa_543-L" for="tfa_543"><i class="fa fa-phone fa-2x" aria-hidden="true"></i><br>Business Phone</label></span></span>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D  labelsRemoved maindiv  " id="tfa_546-D" role="group" aria-labelledby="tfa_546-L">
+                                    <div class="inputWrapper"><span id="tfa_546" class="choices horizontal " data-condition="`#tfa_10`"><span class="oneChoice maskControl"><input type="checkbox" value="tfa_547" class="" id="tfa_547" name="tfa_547" data-conditionals="#tfa_857"><label class="label postField mainsubdiv" id="tfa_547-L" for="tfa_547"><i class="fa fa-credit-card-alt fa-2x" aria-hidden="true"></i><br>Payment Processing</label></span></span>
+                                    </div>
+                                </div>
+
+                                <div class="oneField field-container-D  labelsRemoved  maindiv" id="tfa_521-D" role="group" aria-labelledby="tfa_521-L">
+                                    <div class="inputWrapper"><span id="tfa_521" class="choices horizontal " data-condition="`#tfa_9` OR (`#tfa_10` AND `#tfa_854`)"><span class="oneChoice maskControl"><input type="checkbox" value="tfa_523" class="" id="tfa_523" name="tfa_523" data-conditionals="#tfa_345"><label class="label postField mainsubdiv" id="tfa_523-L" for="tfa_523"><i class="fa fa-wifi fa-2x" aria-hidden="true"></i><br>Internet</label></span></span>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D  labelsRemoved maindiv " id="tfa_538-D" role="group" aria-labelledby="tfa_538-L">
+                                    <div class="inputWrapper"><span id="tfa_538" class="choices horizontal " data-condition="`#tfa_9`"><span class="oneChoice maskControl"><input type="checkbox" value="tfa_539" class="" id="tfa_539" name="tfa_539" data-conditionals="#tfa_348"><label class="label postField mainsubdiv" id="tfa_539-L" for="tfa_539"><i class="fa fa-phone fa-2x" aria-hidden="true" ></i><br>Home Phone</label></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wfPage" id="wfPgIndex-3">
+                            <div class="progressbar" style="background-color:rgb(197, 216, 238); ">
+                                <div class="progress">
+                                    <ol class="progress_list">
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text" ><i class="fa fa-check" aria-hidden="true"></i></span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text" style="font-weight: bold;">3</span>
+                                            </span>
+
+                                        </li>
+                                        <li class="progress_listitem">
+                                            <span class="items progress_marker">
+                           <span class="assistive_text">4</span>
+                                            </span>
+
+                                        </li>
+                                    </ol>
+                                    <div class="progress_bar progress_bar_x_small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar">
+                                        <span class="progress_bar_value" style="width: 0%;">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-container">
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text1">Contact Details</span>
+                                        <div></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text2">Select Services</span>
+                                        <div></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text3">My Selections</span>
+                                        <div class="arrow3"></div>
+                                    </div>
+                                    <div class="parent">
+                                        <span class="assistivetext" id="text4">Confirm</span>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section pageSection" id="tfa_343">
+                                <!--   <h4 id="tfa_343-T">Page 3</h4>-->
+                                <div id="tfa_313" class="section" data-condition="`#tfa_306`" style="border: none;">
+                                    <legend id="tfa_313-L" class="heading-title">Wireless</legend>
+                                    <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_314-D">
+                                        <label id="tfa_314-L" for="tfa_314" class="label preField ">Who is your current wireless provider?</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_314" name="tfa_314" value="" placeholder="" title="Who is your current wireless provider?" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_374-D">
+                                        <label id="tfa_374-L" for="tfa_374" class="label preField ">How much is your monthly wireless bill?</label><br>
+                                        <div class="inputWrapper">
+                                            <div class="delimiter delimiterBefore" id="tfa_374-DB">$</div>
+                                            <input type="text" id="tfa_374" name="tfa_374" value="" placeholder="" title="How much is your monthly wireless bill?" class="choicesuni1">
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_320-D" role="group" aria-labelledby="tfa_320-L">
+                                        <label id="tfa_320-L" for="tfa_320" class="label preField ">How many lines are on your plan?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_320" class="choices horizontal " data-condition="`#tfa_9`"><span class="oneChoice maskControl"><input type="radio" value="tfa_321" class="" id="tfa_321" name="tfa_320"><label class="label postField " id="tfa_321-L" for="tfa_321">1</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_322" class="" id="tfa_322" name="tfa_320"><label class="label postField postfieldline" id="tfa_322-L" for="tfa_322">2</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_323" class="" id="tfa_323" name="tfa_320"><label class="label postField postfieldline" id="tfa_323-L" for="tfa_323">3</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_324" class="" id="tfa_324" name="tfa_320"><label class="label postField postfieldline" id="tfa_324-L" for="tfa_324">4+</label></span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="oneField field-container-D    " id="tfa_573-D" role="group" aria-labelledby="tfa_573-L">
+                                        <label id="tfa_573-L" for="tfa_573" class="label preField ">How many lines are on your plan?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_573" class="choices horizontal " data-condition="`#tfa_10`"><span class="oneChoice maskControl"><input type="radio" value="tfa_574" class="" id="tfa_574" name="tfa_573"><label class="label postField " id="tfa_574-L" for="tfa_574">5-10</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_575" class="" id="tfa_575" name="tfa_573"><label class="label postField postfieldline" id="tfa_575-L" for="tfa_575">11-20</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_576" class="" id="tfa_576" name="tfa_573"><label class="label postField postfieldline" id="tfa_576-L" for="tfa_576">21-30</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_577" class="" id="tfa_577" name="tfa_573"><label class="label postField postfieldline" id="tfa_577-L" for="tfa_577">31+</label></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_326-D" role="group" aria-labelledby="tfa_326-L">
+                                        <label id="tfa_326-L" for="tfa_326" class="label preField ">How much data are you using monthly?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_326" class="choices horizontal " data-condition="`#tfa_9`"><span class="oneChoice maskControl"><input type="radio" value="tfa_327" class="" id="tfa_327" name="tfa_326"><label class="label postField" id="tfa_327-L" for="tfa_327">Low User<br> 1GB - 3GB</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_328" class="" id="tfa_328" name="tfa_326"><label class="label postField" id="tfa_328-L" for="tfa_328">Medium User<br> 3GB - 6GB</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_329" class="" id="tfa_329" name="tfa_326"><label class="label postField" id="tfa_329-L" for="tfa_329">High User<br> 6GB+</label></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_579-D">
+                                        <label id="tfa_579-L" for="tfa_579" class="label preField ">How much shareable data do you use every month?</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_579" name="tfa_579" value="" placeholder="" data-condition="`#tfa_10`" title="How much shareable data do you use every month?" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_349-D" role="group" aria-labelledby="tfa_349-L">
+                                        <label id="tfa_349-L" for="tfa_349" class="label preField ">Do you own your device or are you paying monthly for it?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_349" class="choices horizontal " data-condition="`#tfa_9`"><span class="oneChoice maskControl"><input type="radio" value="tfa_350" class="" id="tfa_350" name="tfa_349"><label class="label postField" id="tfa_350-L" for="tfa_350">Own Device</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_351" class="" id="tfa_351" name="tfa_349"><label class="label postField" id="tfa_351-L" for="tfa_351">Paying Monthly</label></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D   hintsSide " id="tfa_439-D" style="margin-top: 0px!important;">
+
+                                        <div class="inputWrapper">
+
+                                            <div id="tfa_439" multiple name="tfa_439[]" data-condition="`#tfa_9`" title="What is most important to you when selecting a wireless provider?" aria-describedby="tfa_439-HH" class="section1">
+                                                <label id="tfa_439-L" for="tfa_439" class="label preField ">What is most important to you when selecting a wireless provider?</label><br>
+                                                <br>
+                                                <div class=" maskControl container">
+                                                    <input type="checkbox" value="tfa_440" id="tfa_440" class="">
+                                                    <label for="tfa_440"><span class="label checkbox" id="tfa_331-L" for="tfa_440">Unlimited talk, text &amp; data</span></label>
+
+                                                </div><br>
+
+                                                <div class=" maskControl container">
+                                                    <input type="checkbox" value="tfa_441" id="tfa_441" class="">
+                                                    <label for="tfa_441"><span class="label checkbox" id="tfa_332-L" for="tfa_441">Family Plans</span></label>
+
+                                                </div><br>
+                                                <div class=" maskControl container">
+                                                    <input type="checkbox" value="tfa_442" id="tfa_442" class="">
+                                                    <label for="tfa_442"><span class="label checkbox" id="tfa_333-L" for="tfa_442">Mobile Hotspot</span></label>
+
+                                                </div><br>
+                                                <div class=" maskControl container">
+                                                    <input type="checkbox" value="tfa_443" id="tfa_443" class="">
+                                                    <label for="tfa_443"><span class="label checkbox " id="tfa_334-L" for="tfa_443">Equipment Financing</span></label>
+
+                                                </div><br>
+                                                <div class=" maskControl container">
+                                                    <input type="checkbox" value="tfa_444" id="tfa_444" data-conditionals="#tfa_352" class="">
+                                                    <label for="tfa_444"><span class="label checkbox" id="tfa_335-L" for="tfa_444">Other</span></label>
+
+                                                </div><br>
+                                                <span class="field-hint-inactive" id="tfa_439-H"><span id="tfa_439-HH" class="hint">Select all that apply</span></span><br>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="oneField field-container-D   hintsSide " id="tfa_586-D" style="margin-top: 0px!important;">
+
+                                        <div class="inputWrapper">
+
+                                            <div id="tfa_586" multiple name="tfa_586[]" data-condition="`#tfa_10`" title="What is most important to you when selecting a wireless plan/provider?" aria-describedby="tfa_586-HH" class="section1">
+                                                <label id="tfa_586-L" for="tfa_586" class="label preField ">What is most important to you when selecting a wireless plan/provider?</label><br><br>
+                                                <div class=" maskControl  container">
+                                                    <input type="checkbox" value="tfa_587" id="tfa_587" class="">
+                                                    <label for="tfa_587"><span class=" label checkbox " id="tfa_587-L" for="tfa_587">Unlimited talk, text &amp; data</span></label>
+
+                                                </div><br>
+
+                                                <div class=" maskControl  container">
+                                                    <input type="checkbox" value="tfa_589" id="tfa_589" class="">
+                                                    <label for="tfa_589"><span class="label checkbox" id="tfa_589-L" for="tfa_589">Mobile Hotspot</span></label>
+                                                </div><br>
+                                                <div class=" maskControl  container">
+                                                    <input type="checkbox" value="tfa_590" id="tfa_590" class="">
+                                                    <label for="tfa_590"><span class=" label checkbox " id="tfa_590-L" for="tfa_590">Equipment Financing</span></label>
+
+                                                </div><br>
+                                                <div class=" maskControl  container">
+                                                    <input type="checkbox" value="tfa_591" id="tfa_591" data-conditionals="#tfa_352" class="">
+                                                    <label for="tfa_591"><span class="label checkbox " id="tfa_591-L" for="tfa_591">Other</span></label>
+                                                </div><br>
+                                                <span class="field-hint-inactive" id="tfa_586-H"><span id="tfa_586-HH" class="hint">Select all that apply</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="oneField field-container-D   " id="tfa_352-D">
+                                        <label id="tfa_352-L" for="tfa_352" class="label preField ">Other</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_352" name="tfa_352" value="" placeholder="" data-condition="`#tfa_444` OR `#tfa_591`" title="Other" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_353-D" style="margin-top: 0px!important;">
+                                        <label id="tfa_353-L" for="tfa_353" class="label preField ">What type of phone do you have?</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_353" name="tfa_353" value="" placeholder="" data-condition="`#tfa_9`" title="What type of phone do you have?" class="choicesuni"></div>
+                                    </div>
+                                    <div id="tfa_592" class="section inline group">
+                                        <div class="oneField field-container-D    " id="tfa_457-D" role="group" aria-labelledby="tfa_457-L">
+                                            <div id="tfa_457" class="choices horizontal ">
+                                                <div class="adjust" style="float: left"><label id="tfa_457-L" for="tfa_457" class="label preField ">Are you in a contract?</label>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_458" class="" id="tfa_458" name="tfa_457" data-conditionals="#tfa_370"  aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                                                <span class = "slds-checkbox_on" id="tfa_458-L" for="tfa_458">Yes</span>
+                                                            <span class = "slds-checkbox_off" id="tfa_459-L" for="tfa_458">No</span>
+                                                              </span>
+                                                            </span>
+                                                          </span>
+                                                            </label>
+                                                </div>
+                                            </div>
+
+                                            <!--<div class="inputWrapper"><span id="tfa_457" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_458" class="" id="tfa_458" name="tfa_457" data-conditionals="#tfa_370"><label class="label postField" id="tfa_458-L" for="tfa_458">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_459" class="" id="tfa_459" name="tfa_457"><label class="label postField" id="tfa_459-L" for="tfa_459">No</label></span></span>
+                                            </div>-->
+                                        </div>
+                                        <div class="oneField field-container-D  " id="tfa_370-D" style="margin-top: 0px!important;">
+                                            <label id="tfa_370-L" for="tfa_370" class="label preField ">When does your contract end?</label><br>
+                                            <div class="inputWrapper"><input type="text" id="tfa_370" name="tfa_370" value="" placeholder="" data-condition="`#tfa_458`" title="When does your contract end?" class="choicesuni"></div>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D   hintsSide " id="tfa_354-D" role="group" aria-labelledby="tfa_354-L" aria-describedby="tfa_354-HH">
+                                        <div id="tfa_354" class="choices horizontal " data-condition="`#tfa_9`" style="border: none;">
+                                            <div class="adjust" style="float: left"> <label id="tfa_354-L" for="tfa_354" class="label preField preprefield">Would you like your contact to tell you how you could get your wireless service for free* through our customer referral program?</label></div>
+                                            <div class="form-element">
+                                                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_6" name="tfa_5" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                                                <span class = "slds-checkbox_on">Yes</span>
+                                                            <span class = "slds-checkbox_off">No</span>
+                                                              </span>
+                                                            </span>
+                                                          </span>
+                                                            </label>
+                                            </div>
+                                            <span class="field-hint-inactive" id="tfa_354-H"><span id="tfa_354-HH" class="hint">*Excludes taxes, fees and surcharges.</span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="oneField field-container-D    " id="tfa_360-D" role="group" aria-labelledby="tfa_360-L">
+                                        <div class="adjust" style="float: left"><label id="tfa_360-L" for="tfa_360" class="label preField preprefield">Would you like to help feed a child in need EVERY time your pay your monthly Wireless bill?</label></div>
+                                        <div class="form-element">
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_361" class="" id="tfa_361" name="tfa_360" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                                                <span class = "slds-checkbox_on" id="tfa_361-L" for="tfa_361">Yes</span>
+                                                            <span class = "slds-checkbox_off" id="tfa_362-L" for="tfa_361">No</span>
+                                                              </span>
+                                                            </span>
+                                                          </span>
+                                                            </label>
+                                        </div>
+                                        <!--<div class="inputWrapper"><span id="tfa_360" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_361" class="" id="tfa_361" name="tfa_360"><label class="label postField" id="tfa_361-L" for="tfa_361">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_362" class="" id="tfa_362" name="tfa_360"><label class="label postField" id="tfa_362-L" for="tfa_362">No</label></span></span>
+                                        </div>-->
+                                    </div>
+                                </div>
+                                <div id="tfa_345" class="section" data-condition="`#tfa_523`" style="border: none;">
+                                    <legend id="tfa_345-L" class="heading-title">Internet</legend>
+                                    <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_372-D">
+                                        <label id="tfa_372-L" for="tfa_372" class="label preField ">Who is your current Internet Service provider?</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_372" name="tfa_372" value="" placeholder="" title="Who is your current Internet Service provider?" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_375-D">
+                                        <label id="tfa_375-L" for="tfa_375" class="label preField ">What type of service do you currently have?</label><br>
+                                        <div class="inputWrapper"><select id="tfa_375" name="tfa_375" data-condition="`#tfa_853`" title="What type of service do you currently have?" class="choicesuni"><option value="">Please select...</option>
+                                        <option value="tfa_376" id="tfa_376" class="">Cable</option>
+                                        <option value="tfa_377" id="tfa_377" class="">DSL</option>
+                                        <option value="tfa_378" id="tfa_378" class="">Fiber</option>
+                                        <option value="tfa_379" id="tfa_379" data-conditionals="#tfa_381" class="">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_562-D">
+                                        <label id="tfa_562-L" for="tfa_562" class="label preField ">What type of service do you currently have?</label><br>
+                                        <div class="inputWrapper"><select id="tfa_562" name="tfa_562" data-condition="`#tfa_854`" title="What type of service do you currently have?" class="choicesuni"><option value="">Please select...</option>
+                                        <option value="tfa_563" id="tfa_563" class="">Cable</option>
+                                        <option value="tfa_564" id="tfa_564" class="">DSL</option>
+                                        <option value="tfa_565" id="tfa_565" class="">Fibre</option>
+                                        <option value="tfa_566" id="tfa_566" data-conditionals="#tfa_381" class="">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D  labelsRightAligned  " id="tfa_381-D">
+                                        <label id="tfa_381-L" for="tfa_381" class="label preField ">Other</label><br>
+                                        <div class="inputWrapper"><input type="text" id="tfa_381" name="tfa_381" value="" placeholder="" data-condition="`#tfa_379` OR `#tfa_566`" title="Other" class="choicesuni"></div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_319-D">
+                                        <label id="tfa_319-L" for="tfa_319" class="label preField ">How much is your monthly Internet bill?</label><br>
+                                        <div class="inputWrapper">
+                                            <div class="delimiter delimiterBefore" id="tfa_319-DB">$</div>
+                                            <input type="text" id="tfa_319" name="tfa_319" value="" placeholder="" title="How much is your monthly Internet bill?" class="choicesuni1">
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_839-D" role="group" aria-labelledby="tfa_839-L">
+                                        <label id="tfa_839-L" for="tfa_839" class="label preField ">What type of Internet user are you?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_839" class="choices horizontal " data-condition="`#tfa_9` AND `#tfa_853`"><span class="oneChoice maskControl"><input type="radio" value="tfa_840" class="" id="tfa_840" name="tfa_839"><label class="label postField " id="tfa_840-L" for="tfa_840">Light <br> Surfing/Videos</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_841" class="" id="tfa_841" name="tfa_839"><label class="label postField " id="tfa_841-L" for="tfa_841">Moderate <br> Movies/Videos</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_842" class="" id="tfa_842" name="tfa_839"><label class="label postField " id="tfa_842-L" for="tfa_842">Heavy<br> Movies/Games</label></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_753-D" role="group" aria-labelledby="tfa_753-L">
+                                        <label id="tfa_753-L" for="tfa_753" class="label preField ">What is your current Internet speed?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_753" class="choices horizontal " data-condition="`#tfa_10` OR (`#tfa_9` AND `#tfa_854`)"><span class="oneChoice maskControl"><input type="radio" value="tfa_757" class="" id="tfa_757" name="tfa_753"><label class="label postField " id="tfa_757-L" for="tfa_757">5-25 <br> Mbps</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_758" class="" id="tfa_758" name="tfa_753"><label class="label postField postfieldline" id="tfa_758-L" for="tfa_758">25-50 <br> Mbps</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_759" class="" id="tfa_759" name="tfa_753"><label class="label postField postfieldline" id="tfa_759-L" for="tfa_759">50-100 <br> Mbps</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_760" class="" id="tfa_760" name="tfa_753"><label class="label postField postfieldline" id="tfa_760-L" for="tfa_760">100+ <br> Mbps</label></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_848-D" role="group" aria-labelledby="tfa_848-L">
+                                        <label id="tfa_848-L" for="tfa_848" class="label preField ">What is your desired Internet speed?</label><br>
+                                        <div class="inputWrapper"><span id="tfa_848" class="choices horizontal " data-condition="`#tfa_9` AND `#tfa_854`"><span class="oneChoice maskControl"><input type="radio" value="tfa_849" class="" id="tfa_849" name="tfa_848"><label class="label postField " id="tfa_849-L" for="tfa_849">5-25 <br> Mbps</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_850" class="" id="tfa_850" name="tfa_848"><label class="label postField postfieldline" id="tfa_850-L" for="tfa_850">25-50 <br> Mbps</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_851" class="" id="tfa_851" name="tfa_848"><label class="label postField postfieldline" id="tfa_851-L" for="tfa_851">50-100 <br> Mbps</label></span><span class="oneChoice maskControl"><input type="radio" value="tfa_852" class="" id="tfa_852" name="tfa_848"><label class="label postField postfieldline" id="tfa_852-L" for="tfa_852">100+ <br> Mbps</label></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="oneField field-container-D    " id="tfa_876-D" role="group" aria-labelledby="tfa_876-L">
+                                        <div class="inputWrapper">
+                                            <span id="tfa_876" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_854`">
+                                        <div class="adjust" style="float: left">
+                                            <label id="tfa_876-L" for="tfa_876" class="label preField preprefield ">Is this service bundled with your business phone lines?</label></div>                                    
+                                            
+                                                <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_877" name="tfa_876" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_877-L" for="tfa_877">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_878-L" for="tfa_877">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+                                        </div>
+                                        </span>
+                                    </div>
+                                    <!--<div class="inputWrapper"><span id="tfa_876" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_854`"><span class="oneChoice"><input type="radio" value="tfa_877" class="" id="tfa_877" name="tfa_876"><label class="label postField" id="tfa_877-L" for="tfa_877">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_878" class="" id="tfa_878" name="tfa_876"><label class="label postField" id="tfa_878-L" for="tfa_878">No</label></span></span>
+                                    </div>-->
+                                </div>
+                                <div id="tfa_879" class="section inline group">
+                                    <div class="oneField field-container-D    " id="tfa_764-D" role="group" aria-labelledby="tfa_764-L">
+                                        <div class="inputWrapper"><span id="tfa_764" class="choices horizontal " data-condition="`#tfa_10`">
+                                            <div class="adjust" style="float: left"> <label id="tfa_764-L" for="tfa_764" class="label preField preprefield">Are you in a contract?</label></div>
+                                            <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_765" name="tfa_764" data-conditionals="#tfa_768" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_765-L" for="tfa_765">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_766-L" for="tfa_765">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+                                        </div>
+                                        <!--<div class="inputWrapper"><span id="tfa_764" class="choices horizontal " data-condition="`#tfa_10`"><span class="oneChoice"><input type="radio" value="tfa_765" class="" id="tfa_765" name="tfa_764" data-conditionals="#tfa_768"><label class="label postField" id="tfa_765-L" for="tfa_765">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_766" class="" id="tfa_766" name="tfa_764"><label class="label postField" id="tfa_766-L" for="tfa_766">No</label></span></span>
+                                        </div>-->
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="oneField field-container-D  " id="tfa_768-D">
+                                    <label id="tfa_768-L" for="tfa_768" class="label preField ">When does your contract end?</label><br>
+                                    <div class="inputWrapper"><input type="text" id="tfa_768" name="tfa_768" value="" placeholder="" data-condition="`#tfa_765`" title="When does your contract end?" class="choicesuni"></div>
+                                </div>
+                                <br>
+                                <div class="oneField field-container-D    " id="tfa_773-D" role="group" aria-labelledby="tfa_773-L">
+                                    <div class="inputWrapper"><span id="tfa_773" class="choices horizontal " data-condition="`#tfa_10` OR (`#tfa_9` AND `#tfa_854`)">
+                                        <div class="adjust" style="float: left"><label id="tfa_773-L" for="tfa_773" class="label preField preprefield">Would you like to help feed a child in need EVERY time your pay your monthly Internet bill?</label></div>
+                                        <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_774" name="tfa_773"  aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                        <span class="slds-checkbox_on" id="tfa_774-L" for="tfa_774">Yes</span>
+                                        <span class="slds-checkbox_off" id="tfa_775-L" for="tfa_774">No</span>
+                                        </span>
+                                        </span>
+                                        </span>
+                                        </label>
+                                    </div>
+                                    <!--<div class="inputWrapper"><span id="tfa_773" class="choices horizontal " data-condition="`#tfa_10` OR (`#tfa_9` AND `#tfa_854`)"><span class="oneChoice"><input type="radio" value="tfa_774" class="" id="tfa_774" name="tfa_773"><label class="label postField" id="tfa_774-L" for="tfa_774">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_775" class="" id="tfa_775" name="tfa_773"><label class="label postField" id="tfa_775-L" for="tfa_775">No</label></span></span>-->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="tfa_346" class="section" data-condition="`#tfa_527`" style="border: none;">
+                    <legend id="tfa_346-L" class="heading-title">Energy</legend>
+                    <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_391-D">
+                        <label id="tfa_391-L" for="tfa_391" class="label preField ">Who is your current electricity provider?</label><br>
+                        <div class="inputWrapper"><input type="text" id="tfa_391" name="tfa_391" value="" placeholder="" title="Who is your current electricity provider?" class="choicesuni"></div>
+                    </div>
+                    <div class="oneField field-container-D    " id="tfa_395-D">
+                        <label id="tfa_395-L" for="tfa_395" class="label preField ">How much is your monthly electricity bill?</label><br>
+                        <div class="inputWrapper">
+                            <div class="delimiter delimiterBefore" id="tfa_395-DB">$</div>
+                            <input type="text" id="tfa_395" name="tfa_395" value="" placeholder="" title="How much is your monthly electricity bill?" class="choicesuni1">
+                        </div>
+                    </div>
+                    <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_393-D">
+                        <label id="tfa_393-L" for="tfa_393" class="label preField ">Who is your current natural gas provider?</label><br>
+                        <div class="inputWrapper"><input type="text" id="tfa_393" name="tfa_393" value="" placeholder="" title="Who is your current natural gas provider?" class="choicesuni"></div>
+                    </div>
+                    <div class="oneField field-container-D    " id="tfa_397-D">
+                        <label id="tfa_397-L" for="tfa_397" class="label preField ">How much is your monthly natural gas&nbsp;bill?</label><br>
+                        <div class="inputWrapper">
+                            <div class="delimiter delimiterBefore" id="tfa_397-DB">$</div>
+                            <input type="text" id="tfa_397" name="tfa_397" value="" placeholder="" title="How much is your monthly natural gas bill?" class="choicesuni1">
+                        </div>
+                    </div>
+                    <div class="oneField field-container-D    " id="tfa_401-D" role="group" aria-labelledby="tfa_401-L">
+                        <div class="inputWrapper"><span id="tfa_401" class="choices horizontal " data-condition="`#tfa_9`">
+                                    <div class="adjust" style="float: left"><label id="tfa_401-L" for="tfa_401" class="label preField preprefield">Would you like to pay one flat rate every month for your electricity and/or natural gas?</label></div>
+                                        <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_402" name="tfa_401"  aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on" id="tfa_402-L" for="tfa_402">Yes</span>
+                            <span class="slds-checkbox_off" id="tfa_403-L" for="tfa_402">No</span>
+                            </span>
+                            </span>
+                            </span>
+                            </label>
+                        </div>
+                        <!--<div class="inputWrapper"><span id="tfa_401" class="choices horizontal " data-condition="`#tfa_9`"><span class="oneChoice"><input type="radio" value="tfa_402" class="" id="tfa_402" name="tfa_401"><label class="label postField" id="tfa_402-L" for="tfa_402">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_403" class="" id="tfa_403" name="tfa_401"><label class="label postField" id="tfa_403-L" for="tfa_403">No</label></span></span>
+                                    </div>-->
+                        </span>
+                    </div>
+                </div>
+                <div id="tfa_695" class="section inline group">
+                    <div class="oneField field-container-D    " id="tfa_690-D" role="group" aria-labelledby="tfa_690-L">
+                        <div class="inputWrapper"><span id="tfa_690" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_853`">
+                                            <div class="adjust" style="float: left"><label id="tfa_690-L" for="tfa_690" class="label preField preprefield">Are you in a contract?</label></div>
+                                            <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_691" name="tfa_690" data-conditionals="#tfa_694" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on" id="tfa_691-L" for="tfa_691">Yes</span>
+                            <span class="slds-checkbox_off" id="tfa_692-L" for="tfa_691">No</span>
+                            </span>
+                            </span>
+                            </span>
+                            </label>
+                        </div>
+                        <!--<div class="inputWrapper"><span id="tfa_690" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_853`"><span class="oneChoice"><input type="radio" value="tfa_691" class="" id="tfa_691" name="tfa_690" data-conditionals="#tfa_694"><label class="label postField" id="tfa_691-L" for="tfa_691">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_692" class="" id="tfa_692" name="tfa_690"><label class="label postField" id="tfa_692-L" for="tfa_692">No</label></span></span>
+                                        </div>-->
+                        </span>
+                    </div>
+                </div>
+                <div class="oneField field-container-D  labelsRightAligned  " id="tfa_694-D" style="margin-top: 0px!important;">
+                    <label id="tfa_694-L" for="tfa_694" class="label preField ">When does your contract end?</label><br>
+                    <div class="inputWrapper"><input type="text" id="tfa_694" name="tfa_694" value="" placeholder="" data-condition="`#tfa_691`" title="When does your contract end?" class="choicesuni"></div>
+                </div>
+            </div>
+            <div class="oneField field-container-D    " id="tfa_699-D" role="group" aria-labelledby="tfa_699-L">
+                <div class="inputWrapper"><span id="tfa_699" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_853`">
+                                        <div class="adjust" style="float: left"><label id="tfa_699-L" for="tfa_699" class="label preField preprefield">Are you interested in learning how to save on your energy bill by going solar?</label></div>
+                                        <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_700" name="tfa_699" data-conditionals="#tfa_694" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                    <span class="slds-checkbox_on" id="tfa_700-L" for="tfa_700">Yes</span>
+                    <span class="slds-checkbox_off" id="tfa_701-L" for="tfa_700">No</span>
+                    </span>
+                    </span>
+                    </span>
+                    </label>
+                </div>
+                <!--<div class="inputWrapper"><span id="tfa_699" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_853`"><span class="oneChoice"><input type="radio" value="tfa_700" class="" id="tfa_700" name="tfa_699"><label class="label postField" id="tfa_700-L" for="tfa_700">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_701" class="" id="tfa_701" name="tfa_699"><label class="label postField" id="tfa_701-L" for="tfa_701">No</label></span></span>
+                                    </div>-->
+                </span>
+            </div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_779-D" role="group" aria-labelledby="tfa_779-L">
+            <div class="inputWrapper"><span id="tfa_779" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_854`">
+                                        <div class="adjust" style="float: left"><label id="tfa_779-L" for="tfa_779" class="label preField preprefield">Are you interested in learning more about how to use solar energy?</label></div>
+                                        <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_780" name="tfa_779" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                <span class="slds-checkbox_on" id="tfa_780-L" for="tfa_780">Yes</span>
+                <span class="slds-checkbox_off" id="tfa_781-L" for="tfa_780">No</span>
+                </span>
+                </span>
+                </span>
+                </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_779" class="choices horizontal " data-condition="`#tfa_10` AND `#tfa_854`"><span class="oneChoice"><input type="radio" value="tfa_780" class="" id="tfa_780" name="tfa_779"><label class="label postField" id="tfa_780-L" for="tfa_780">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_781" class="" id="tfa_781" name="tfa_779"><label class="label postField" id="tfa_781-L" for="tfa_781">No</label></span></span>
+                                    </div>-->
+            </span>
+        </div>
+    </div>
+    </div>
+
+    <div id="tfa_336" class="section" data-condition="`#tfa_531` AND `#tfa_9`" style="border: none;">
+        <legend id="tfa_336-L" class="heading-title">Smart Home Automation &amp; Security&nbsp;</legend>
+        <div class="oneField field-container-D    " id="tfa_337-D" role="group" aria-labelledby="tfa_337-L">
+            <div class="adjust" style="float: left"><label id="tfa_337-L" for="tfa_337" class="label preField preprefield">Do you have a home security system?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_339" name="tfa_337" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_339-L" for="tfa_339">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_338-L" for="tfa_339">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_337" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_339" class="" id="tfa_339" name="tfa_337"><label class="label postField" id="tfa_339-L" for="tfa_339">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_338" class="" id="tfa_338" name="tfa_337"><label class="label postField" id="tfa_338-L" for="tfa_338">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_405-D">
+            <label id="tfa_405-L" for="tfa_405" class="label preField ">Who is your current home security service provider?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_405" name="tfa_405" value="" placeholder="" title="Who is your current home security service provider?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_409-D" role="group" aria-labelledby="tfa_409-L">
+            <div class="adjust" style="float: left"><label id="tfa_409-L" for="tfa_409" class="label preField preprefield">Are you interested in Smart Home Automation?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_6" class="" id="tfa_410" name="tfa_409" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_410-L" for="tfa_410">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_411-L" for="tfa_410">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_409" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_410" class="" id="tfa_410" name="tfa_409"><label class="label postField" id="tfa_410-L" for="tfa_410">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_411" class="" id="tfa_411" name="tfa_409"><label class="label postField" id="tfa_411-L" for="tfa_411">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_413-D">
+            <label id="tfa_413-L" for="tfa_413" class="label preField ">How much is your monthly home security bill?</label><br>
+            <div class="inputWrapper">
+                <div class="delimiter delimiterBefore" id="tfa_413-DB">$</div>
+                <input type="text" id="tfa_413" name="tfa_413" value="" placeholder="" title="How much is your monthly home security bill?" class="choicesuni1">
+            </div>
+        </div>
+    </div>
+    <div id="tfa_711" class="section" data-condition="`#tfa_531` AND `#tfa_10`" style="border: none;">
+        <legend id="tfa_711-L" class="heading-title">Security &amp; Automation</legend>
+        <div class="oneField field-container-D    " id="tfa_712-D" role="group" aria-labelledby="tfa_712-L">
+            <div class="adjust" style="float: left"><label id="tfa_712-L" for="tfa_712" class="label preField preprefield">Do you have a business security system?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_713" class="" id="tfa_713" name="tfa_712" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_713-L" for="tfa_713">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_714-L" for="tfa_714">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_712" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_713" class="" id="tfa_713" name="tfa_712"><label class="label postField" id="tfa_713-L" for="tfa_713">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_714" class="" id="tfa_714" name="tfa_712"><label class="label postField" id="tfa_714-L" for="tfa_714">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_715-D">
+            <label id="tfa_715-L" for="tfa_715" class="label preField ">Who is your current security service provider?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_715" name="tfa_715" value="" placeholder="" title="Who is your current security service provider?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_716-D" role="group" aria-labelledby="tfa_716-L">
+            <div class="adjust" style="float: left"><label id="tfa_716-L" for="tfa_716" class="label preField preprefield">Are you interested in Smart Automation for your business?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_717" class="" id="tfa_717" name="tfa_716" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_717-L" for="tfa_717">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_718-L" for="tfa_717">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_716" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_717" class="" id="tfa_717" name="tfa_716"><label class="label postField" id="tfa_717-L" for="tfa_717">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_718" class="" id="tfa_718" name="tfa_716"><label class="label postField" id="tfa_718-L" for="tfa_718">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_719-D">
+            <label id="tfa_719-L" for="tfa_719" class="label preField ">How much is your monthly security bill?</label><br>
+            <div class="inputWrapper">
+                <div class="delimiter delimiterBefore" id="tfa_719-DB">$</div>
+                <input type="text" id="tfa_719" name="tfa_719" value="" placeholder="" title="How much is your monthly security bill?" class="choicesuni1">
+            </div>
+        </div>
+    </div>
+    <div id="tfa_347" class="section" data-condition="`#tfa_535`" style="border: none;">
+        <legend id="tfa_347-L" class="heading-title">Television</legend>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_415-D">
+            <label id="tfa_415-L" for="tfa_415" class="label preField ">Who is your current TV service provider?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_415" name="tfa_415" value="" placeholder="" title="Who is your current TV service provider?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D   hintsSide " id="tfa_422-D">
+
+            <!-- <div class="inputWrapper">-->
+            <div id="tfa_422" multiple name="tfa_422[]" data-condition="`#tfa_9`" title="Is your TV service bundled with other services? Which services are included? " aria-describedby="tfa_422-HH" class="section1">
+                <label id="tfa_422-L" for="tfa_422" class="label preField ">Is your TV service bundled with other services?&nbsp;Which services are included?&nbsp;</label><br><br>
+                <div class=" maskControl container">
+                    <input type="checkbox" value="tfa_426" id="tfa_426" class="">
+                    <label for="tfa_426"><span class="label checkbox" id="tfa_426-L" for="tfa_426">Not Bundled - Only TV</span></label>
+                </div><br>
+                <div class=" maskControl container">
+                    <input type="checkbox" value="tfa_423" id="tfa_423" class="">
+                    <label for="tfa_423"><span class="label checkbox" id="tfa_423-L" for="tfa_423">Home Phone</span></label>
+                </div><br>
+                <div class=" maskControl container">
+                    <input type="checkbox" value="tfa_424" id="tfa_424" class="">
+                    <label for="tfa_424"><span class="label checkbox" id="tfa_424-L" for="tfa_424">Internet</span></label>
+                </div><br>
+                <div class=" maskControl container">
+                    <input type="checkbox" value="tfa_427" id="tfa_427" data-conditionals="#tfa_429" class="">
+                    <label for="tfa_427"><span class="label checkbox" id="tfa_427-L" for="tfa_427">Other</span></label>
+                </div><br>
+                <!--<option value="">Please select...</option>
+<option value="tfa_426" id="tfa_426" class="">Not Bundled - Only TV</option>
+<option value="tfa_423" id="tfa_423" class="">Home Phone</option>
+<option value="tfa_424" id="tfa_424" class="">Internet</option>
+<option value="tfa_427" id="tfa_427" data-conditionals="#tfa_429" class="">Other</option>-->
+                <span class="field-hint-inactive" id="tfa_422-H"><span id="tfa_422-HH" class="hint">Select all that apply</span></span>
+            </div>
+
+            <!-- </div>-->
+        </div>
+        <div class="oneField field-container-D " id="tfa_429-D">
+            <label id="tfa_429-L" for="tfa_429" class="label preField ">Other</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_429" name="tfa_429" value="" placeholder="" data-condition="`#tfa_427`" title="Other" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_430-D">
+            <label id="tfa_430-L" for="tfa_430" class="label preField ">How many TVs do you have in your home?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_430" name="tfa_430" value="" placeholder="" data-condition="`#tfa_9`" title="How many TVs do you have in your home?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_748-D">
+            <label id="tfa_748-L" for="tfa_748" class="label preField ">How many TVs do you have?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_748" name="tfa_748" value="" placeholder="" data-condition="`#tfa_10`" title="How many TVs do you have?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_432-D">
+            <label id="tfa_432-L" for="tfa_432" class="label preField ">How much is your monthly television bill?</label><br>
+            <div class="inputWrapper">
+                <div class="delimiter delimiterBefore" id="tfa_432-DB">$</div>
+                <input type="text" id="tfa_432" name="tfa_432" value="" placeholder="" title="How much is your monthly television bill?" class="choicesuni1">
+            </div>
+        </div>
+        <div class="oneField field-container-D   hintsSide " id="tfa_330-D">
+
+            <div class="inputWrapper">
+                <div id="tfa_330" multiple name="tfa_330[]" title="What are the most important features you consider when purchasing a TV package?" aria-describedby="tfa_330-HH" class="section1">
+                    <label id="tfa_330-L" for="tfa_330" class="label preField ">What are the most important features you consider when purchasing a TV package?</label><br><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_447" id="tfa_447" class="">
+                        <label for="tfa_447"><span class="label checkbox" id="tfa_447-L" for="tfa_447">Premium Channels</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_448" id="tfa_448" class="">
+                        <label for="tfa_448"><span class="label checkbox" id="tfa_448-L" for="tfa_448">Premium Sports Package</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_449" id="tfa_449" class="">
+                        <label for="tfa_449"><span class="label checkbox" id="tfa_449-L" for="tfa_449">DVR</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_450" id="tfa_450" class="">
+                        <label for="tfa_450"><span class="label checkbox" id="tfa_450-L" for="tfa_450">On-Demand Shows</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_451" id="tfa_451" class="">
+                        <label for="tfa_451"><span class="label checkbox" id="tfa_451-L" for="tfa_451">On-Demand Movies</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_452" id="tfa_452" class="">
+                        <label for="tfa_452"><span class="label checkbox" id="tfa_452-L" for="tfa_452">International Channels</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_453" id="tfa_453" class="">
+                        <label for="tfa_453"><span class="label checkbox" id="tfa_453-L" for="tfa_453">Latino Channels</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_335" id="tfa_335" data-conditionals="#tfa_446" class="">
+                        <label for="tfa_335"><span class="label checkbox" id="tfa_335-L" for="tfa_335">Other</span></label>
+                    </div><br>
+                    <!--<option value="">Please select...</option>
+<option value="tfa_447" id="tfa_447" class="">Premium Channels</option>
+<option value="tfa_448" id="tfa_448" class="">Premium Sports Package</option>
+<option value="tfa_449" id="tfa_449" class="">DVR</option>
+<option value="tfa_450" id="tfa_450" class="">On-Demand Shows</option>
+<option value="tfa_451" id="tfa_451" class="">On-Demand Movies</option>
+<option value="tfa_452" id="tfa_452" class="">International Channels</option>
+<option value="tfa_453" id="tfa_453" class="">Latino Channels</option>
+<option value="tfa_335" id="tfa_335" data-conditionals="#tfa_446" class="">Other</option>-->
+                    <span class="field-hint-inactive" id="tfa_330-H"><span id="tfa_330-HH" class="hint">Select all that apply</span></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="oneField field-container-D   " id="tfa_446-D">
+            <label id="tfa_446-L" for="tfa_446" class="label preField ">Other</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_446" name="tfa_446" value="" placeholder="" data-condition="`#tfa_335`" title="Other" class="choicesuni"></div>
+        </div>
+        <div id="tfa_567" class="section inline group">
+            <div class="oneField field-container-D    " id="tfa_366-D" role="group" aria-labelledby="tfa_366-L">
+                <div class="inputWrapper"><span id="tfa_366" class="choices horizontal ">
+                                        <div class="adjust" style="float: left"><label id="tfa_366-L" for="tfa_366" class="label preField preprefield">Are you in a contract?</label></div>
+                                        <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_367" class="" id="tfa_367" name="tfa_366" data-conditionals="#tfa_461" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                    <span class="slds-checkbox_on" id="tfa_367-L" for="tfa_367">Yes</span>
+                    <span class="slds-checkbox_off" id="tfa_368-L" for="tfa_367">No</span>
+                    </span>
+                    </span>
+                    </span>
+                    </label>
+                </div>
+                </span>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_366" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_367" class="" id="tfa_367" name="tfa_366" data-conditionals="#tfa_461"><label class="label postField" id="tfa_367-L" for="tfa_367">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_368" class="" id="tfa_368" name="tfa_366"><label class="label postField" id="tfa_368-L" for="tfa_368">No</label></span></span>
+                                        </div>-->
+        </div>
+        <div class="oneField field-container-D  labelsRightAligned  " id="tfa_461-D" style="margin-top: 0px!important;">
+            <label id="tfa_461-L" for="tfa_461" class="label preField ">When does your contract end?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_461" name="tfa_461" value="" placeholder="" data-condition="`#tfa_367`" title="When does your contract end?" class="choicesuni"></div>
+        </div>
+    </div>
+    </div>
+
+    <div id="tfa_348" class="section" data-condition="`#tfa_539`" style="border: none;">
+        <legend id="tfa_348-L" class="heading-title">Home Phone</legend>
+        <div class="oneField field-container-D    " id="tfa_465-D" role="group" aria-labelledby="tfa_465-L">
+            <div class="adjust" style="float: left;"><label id="tfa_465-L" for="tfa_465" class="label preField preprefield">Do you have home phone service?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_466" class="" id="tfa_466" name="tfa_465" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_466-L" for="tfa_466">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_467-L" for="tfa_466">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_465" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_466" class="" id="tfa_466" name="tfa_465"><label class="label postField" id="tfa_466-L" for="tfa_466">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_467" class="" id="tfa_467" name="tfa_465"><label class="label postField" id="tfa_467-L" for="tfa_467">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_469-D">
+            <label id="tfa_469-L" for="tfa_469" class="label preField ">Who is your current home phone service provider?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_469" name="tfa_469" value="" placeholder="" title="Who is your current home phone service provider?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D   hintsSide " id="tfa_475-D">
+
+            <div class="inputWrapper">
+                <div id="tfa_475" multiple name="tfa_475[]" title="Is your home phone service bundled with other services? Which services are included? " aria-describedby="tfa_475-HH" class="section1">
+                    <label id="tfa_475-L" for="tfa_475" class="label preField ">Is your home phone service bundled with other services?&nbsp;Which services are included?&nbsp;</label><br><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_476" id="tfa_476" class="">
+                        <label for="tfa_476"><span class="label checkbox" id="tfa_476-L" for="tfa_476">Not Bundled - Only Home Phone</span> </label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_477" id="tfa_477" class="">
+                        <label for="tfa_477"><span class="label checkbox" id="tfa_477-L" for="tfa_477">TV</span> </label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_478" id="tfa_478" class="">
+                        <label for="tfa_478"> <span class="label checkbox" id="tfa_478-L" for="tfa_478">Internet</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_479" id="tfa_479" data-conditionals="#tfa_481" class="">
+                        <label for="tfa_479"> <span class="label checkbox" id="tfa_479-L" for="tfa_479">Other</span></label>
+                    </div><br>
+
+                    <!--<option value="">Please select...</option>
+<option value="tfa_476" id="tfa_476" class="">Not Bundled - Only Home Phone</option>
+<option value="tfa_477" id="tfa_477" class="">TV</option>
+<option value="tfa_478" id="tfa_478" class=""value="tfa_478" id="tfa_478" class="">Internet</option>
+<option value="tfa_479" id="tfa_479" data-conditionals="#tfa_481" class="">Other</option>-->
+                    <span class="field-hint-inactive" id="tfa_475-H"><span id="tfa_475-HH" class="hint">Select all that apply</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="oneField field-container-D  " id="tfa_481-D">
+            <label id="tfa_481-L" for="tfa_481" class="label preField ">Other</label>
+            <div class="inputWrapper"><input type="text" id="tfa_481" name="tfa_481" value="" placeholder="" data-condition="`#tfa_479`" title="Other" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_483-D">
+            <label id="tfa_483-L" for="tfa_483" class="label preField ">How much is your monthly home phone service bill?</label><br>
+            <div class="inputWrapper">
+                <div class="delimiter delimiterBefore" id="tfa_483-DB">$</div>
+                <input type="text" id="tfa_483" name="tfa_483" value="" placeholder="" title="How much is your monthly home phone service bill?" class="choicesuni1">
+            </div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_489-D">
+            <label id="tfa_489-L" for="tfa_489" class="label preField ">Do you make a lot of long-distance or international calls?</label><br>
+            <div class="inputWrapper"><select id="tfa_489" name="tfa_489" title="Do you make a lot of long-distance or international calls?" class="choicesuni"><option value="">--Select--</option>
+<option value="tfa_491" id="tfa_491" class="">No</option>
+<option value="tfa_492" id="tfa_492" class="">Yes - I call mainly Canada, the US and/or Mexico</option>
+<option value="tfa_493" id="tfa_493" class="">Yes - I make most of my calls internationally</option></select></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_497-D" role="group" aria-labelledby="tfa_497-L">
+            <div class="adjust" style="float: left;"><label id="tfa_497-L" for="tfa_497" class="label preField preprefield">Would you be interested in a mobile app that allows you to use you your home phone service on-the-go?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_498" class="" id="tfa_498" name="tfa_497" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_498-L" for="tfa_498">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_499-L" for="tfa_498">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_497" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_498" class="" id="tfa_498" name="tfa_497"><label class="label postField" id="tfa_498-L" for="tfa_498">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_499" class="" id="tfa_499" name="tfa_497"><label class="label postField" id="tfa_499-L" for="tfa_499">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_503-D" role="group" aria-labelledby="tfa_503-L">
+            <div class="adjust" style="float: left;"><label id="tfa_503-L" for="tfa_503" class="label preField preprefield">Would you like to help feed a child in need EVERY time your pay your monthly home phone bill?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_504" class="" id="tfa_504" name="tfa_503" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_504-L" for="tfa_504">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_505-L" for="tfa_504">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_503" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_504" class="" id="tfa_504" name="tfa_503"><label class="label postField" id="tfa_504-L" for="tfa_504">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_505" class="" id="tfa_505" name="tfa_503"><label class="label postField" id="tfa_505-L" for="tfa_505">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D   hintsSide " id="tfa_509-D" role="group" aria-labelledby="tfa_509-L" aria-describedby="tfa_509-HH">
+            <div class="inputWrapper">
+                <span id="tfa_509" class="choices horizontal " data-condition="`#tfa_853`">
+                                        <div class="adjust" style="float: left;"><label id="tfa_509-L" for="tfa_509" class="label preField preprefield">Would you like your contact to tell you how you could get your home phone service for free* through our customer referral program?&nbsp;</label></div>
+                                       <div class="form-element" >
+                                            <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_510" class="" id="tfa_510" name="tfa_509" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                <span class="slds-checkbox_on" id="tfa_510-L" for="tfa_510">Yes</span>
+                <span class="slds-checkbox_off" id="tfa_511-L" for="tfa_510">No</span>
+                </span>
+                </span>
+                </span>
+                </label>
+            </div>
+            <!--<div class="inputWrapper">
+                                        <span id="tfa_509" class="choices horizontal " data-condition="`#tfa_853`"><span class="oneChoice"><input type="radio" value="tfa_510" class="" id="tfa_510" name="tfa_509"><label class="label postField" id="tfa_510-L" for="tfa_510">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_511" class="" id="tfa_511" name="tfa_509"><label class="label postField" id="tfa_511-L" for="tfa_511">No</label></span></span>
+                                    </div>-->
+            <span class="field-hint-inactive" id="tfa_509-H"><span id="tfa_509-HH" class="hint">*Excludes taxes, fees and surcharges.</span></span>
+            </span>
+        </div>
+    </div>
+    <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_856-D">
+        <label id="tfa_856-L" for="tfa_856" class="label preField ">To ensure we provide coverage in your area, please provide your home phone number</label>
+        <div class="inputWrapper"><input type="text" id="tfa_856" name="tfa_856" value="" placeholder="" data-condition="`#tfa_854`" title="To ensure we provide coverage in your area, please provide your home phone number" class="choicesuni"></div>
+    </div>
+    </div>
+
+    <div id="tfa_618" class="section" data-condition="`#tfa_543`" style="border: none;">
+        <legend id="tfa_618-L" class="heading-title">Business Phone</legend>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_622-D">
+            <label id="tfa_622-L" for="tfa_622" class="label preField ">Who is your current business phone service provider?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_622" name="tfa_622" value="" placeholder="" title="Who is your current business phone service provider?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_648-D" role="group" aria-labelledby="tfa_648-L">
+            <label id="tfa_648-L" for="tfa_648" class="label preField ">How many lines of service do you have?</label><br>
+            <div class="inputWrapper">
+                <span id="tfa_648" class="choices horizontal ">
+                                        <span class="oneChoice maskControl"><input type="radio" value="tfa_649" class="" id="tfa_649" name="tfa_648"><label class="label postField " id="tfa_649-L" for="tfa_649">1</label></span>
+                <span class="oneChoice maskControl"><input type="radio" value="tfa_650" class="" id="tfa_650" name="tfa_648"><label class="label postField postfieldline" id="tfa_650-L" for="tfa_650">2</label></span>
+                <span class="oneChoice maskControl"><input type="radio" value="tfa_651" class="" id="tfa_651" name="tfa_648"><label class="label postField postfieldline" id="tfa_651-L" for="tfa_651">3</label></span>
+                <span class="oneChoice maskControl"><input type="radio" value="tfa_652" class="" id="tfa_652" name="tfa_648"><label class="label postField postfieldline" id="tfa_652-L" for="tfa_652">4+</label></span>
+                </span>
+            </div>
+        </div>
+        <div class="oneField field-container-D   hintsSide " id="tfa_623-D">
+
+            <div class="inputWrapper">
+                <div id="tfa_623" multiple name="tfa_623[]" title="Is this service bundled with other services? Which services are included? " aria-describedby="tfa_623-HH" class="section1">
+                    <label id="tfa_623-L" for="tfa_623" class="label preField ">Is this service bundled with other services?&nbsp;Which services are included?&nbsp;</label><br><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_624" id="tfa_624" class="">
+                        <label for="tfa_624"><span class="label checkbox"  id="tfa_624-L" for="tfa_624">Not Bundled - Only Business Phone</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_625" id="tfa_625" class="">
+                        <label for="tfa_625"><span class="label checkbox"  id="tfa_625-L" for="tfa_625">TV</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_626" id="tfa_626" class="">
+                        <label for="tfa_626"><span class="label checkbox" id="tfa_626-L" for="tfa_626">Internet</span></label>
+                    </div><br>
+                    <div class=" maskControl container">
+                        <input type="checkbox" value="tfa_627" id="tfa_627" data-conditionals="#tfa_628" class="">
+                        <label for="tfa_627"><span class="label checkbox"  id="tfa_627-L" for="tfa_627">Other</span></label>
+                    </div><br>
+
+                    <!--<option value="">Please select...</option>
+<option value="tfa_624" id="tfa_624" class="">Not Bundled - Only Business Phone</option>
+<option value="tfa_625" id="tfa_625" class="">TV</option>
+<option value="tfa_626" id="tfa_626" class="">Internet</option>
+<option value="tfa_627" id="tfa_627" data-conditionals="#tfa_628" class="">Other</option>-->
+                    <span class="field-hint-inactive" id="tfa_623-H"><span id="tfa_623-HH" class="hint">Select all that apply</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="oneField field-container-D  " id="tfa_628-D">
+            <label id="tfa_628-L" for="tfa_628" class="label preField ">Other</label>
+            <div class="inputWrapper"><input type="text" id="tfa_628" name="tfa_628" value="" placeholder="" data-condition="`#tfa_627`" title="Other" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_629-D">
+            <label id="tfa_629-L" for="tfa_629" class="label preField ">What is the estimated cost of your monthly bill?</label><br>
+            <div class="inputWrapper">
+                <div class="delimiter delimiterBefore" id="tfa_629-DB">$</div>
+                <input type="text" id="tfa_629" name="tfa_629" value="" placeholder="" title="What is the estimated cost of your monthly bill?" class="choicesuni1">
+            </div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_656-D" role="group" aria-labelledby="tfa_656-L">
+            <div class="adjust" style="float: left;"><label id="tfa_656-L" for="tfa_656" class="label preField preprefield">Do you have the feature “Hunting” or “Roll-Over Service” with any of your business lines?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_657" class="" id="tfa_657" name="tfa_656" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_657-L" for="tfa_657">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_658-L" for="tfa_657">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_656" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_657" class="" id="tfa_657" name="tfa_656"><label class="label postField" id="tfa_657-L" for="tfa_657">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_658" class="" id="tfa_658" name="tfa_656"><label class="label postField" id="tfa_658-L" for="tfa_658">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_662-D" role="group" aria-labelledby="tfa_662-L">
+            <div class="adjust" style="float: left;"><label id="tfa_662-L" for="tfa_662" class="label preField preprefield">Do you have a designated fax line connected to a landline?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_663" class="" id="tfa_663" name="tfa_662" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_663-L" for="tfa_663">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_664-L" for="tfa_663">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_662" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_663" class="" id="tfa_663" name="tfa_662"><label class="label postField" id="tfa_663-L" for="tfa_663">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_664" class="" id="tfa_664" name="tfa_662"><label class="label postField" id="tfa_664-L" for="tfa_664">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_668-D" role="group" aria-labelledby="tfa_668-L">
+            <div class="adjust" style="float: left;"><label id="tfa_668-L" for="tfa_668" class="label preField preprefield">Do you have any Toll-Free numbers?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_669" class="" id="tfa_669" name="tfa_668" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_669-L" for="tfa_669">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_670-L" for="tfa_669">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_668" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_669" class="" id="tfa_669" name="tfa_668"><label class="label postField" id="tfa_669-L" for="tfa_669">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_670" class="" id="tfa_670" name="tfa_668"><label class="label postField" id="tfa_670-L" for="tfa_670">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_674-D" role="group" aria-labelledby="tfa_674-L">
+            <div class="adjust" style="float: left;"><label id="tfa_674-L" for="tfa_674" class="label preField preprefield">Do you have a point-of-sale device connected to a landline?</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_675" class="" id="tfa_675" name="tfa_674" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_675-L" for="tfa_675">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_676-L" for="tfa_675">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+
+            <!--<div class="inputWrapper"><span id="tfa_674" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_675" class="" id="tfa_675" name="tfa_674"><label class="label postField" id="tfa_675-L" for="tfa_675">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_676" class="" id="tfa_676" name="tfa_674"><label class="label postField" id="tfa_676-L" for="tfa_676">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D    " id="tfa_630-D">
+            <label id="tfa_630-L" for="tfa_630" class="label preField ">Do you make a lot of long-distance or international calls?</label><br>
+            <div class="inputWrapper"><select id="tfa_630" name="tfa_630" title="Do you make a lot of long-distance or international calls?" class="choicesuni"><option value="">--Select--</option>
+<option value="tfa_631" id="tfa_631" class="">No</option>
+<option value="tfa_632" id="tfa_632" class="">Yes - I call mainly Canada, the US and/or Mexico</option>
+<option value="tfa_633" id="tfa_633" class="">Yes - I make most of my calls internationally</option></select></div>
+        </div>
+        <div id="tfa_685" class="section inline group">
+            <div class="oneField field-container-D    " id="tfa_680-D" role="group" aria-labelledby="tfa_680-L">
+                <div class="adjust" style="float: left;"><label id="tfa_680-L" for="tfa_680" class="label preField preprefield">Are you in a contract?</label></div>
+                <div class="form-element">
+                    <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_681" class="" id="tfa_681" name="tfa_680" data-conditionals="#tfa_684" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_681-L" for="tfa_681">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_682-L" for="tfa_681">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+                </div>
+
+                <!--<div class="inputWrapper"><span id="tfa_680" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_681" class="" id="tfa_681" name="tfa_680" data-conditionals="#tfa_684"><label class="label postField" id="tfa_681-L" for="tfa_681">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_682" class="" id="tfa_682" name="tfa_680"><label class="label postField" id="tfa_682-L" for="tfa_682">No</label></span></span>
+                                        </div>-->
+            </div>
+            <div class="oneField field-container-D  labelsRightAligned  " id="tfa_684-D" style="margin-top: 0px!important;">
+                <label id="tfa_684-L" for="tfa_684" class="label preField ">When does your contract end?</label><br>
+                <div class="inputWrapper"><input type="text" id="tfa_684" name="tfa_684" value="" placeholder="" data-condition="`#tfa_681`" title="When does your contract end?" class="choicesuni"></div>
+            </div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_686-D">
+            <label id="tfa_686-L" for="tfa_686" class="label preField ">Please provide the primary business line for each business address so we can ensure we provide service in all of your locations</label><br>
+            <div class="inputWrapper"><textarea id="tfa_686" name="tfa_686" title="Please provide the primary business line for each business address so we can ensure we provide service in all of your locations" class="choicesuni"></textarea></div>
+        </div>
+    </div>
+
+    <div id="tfa_857" class="section" data-condition="`#tfa_547`" style="border: none;">
+        <legend id="tfa_857-L" class="heading-title">Payment Processing</legend>
+        <div class="oneField field-container-D    " id="tfa_730-D" role="group" aria-labelledby="tfa_730-L">
+            <div class="adjust" style="float: left;"><label id="tfa_730-L" for="tfa_730" class="label preField preprefield">Do you utilize a payment processing company to accept payments at your establishment?&nbsp;</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_731" class="" id="tfa_731" name="tfa_730" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_731-L" for="tfa_731">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_732-L" for="tfa_731">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_730" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_731" class="" id="tfa_731" name="tfa_730"><label class="label postField" id="tfa_731-L" for="tfa_731">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_732" class="" id="tfa_732" name="tfa_730"><label class="label postField" id="tfa_732-L" for="tfa_732">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div class="oneField field-container-D  labelsLeftAligned  " id="tfa_733-D">
+            <label id="tfa_733-L" for="tfa_733" class="label preField ">Who is your current payment processing service provider?</label><br>
+            <div class="inputWrapper"><input type="text" id="tfa_733" name="tfa_733" value="" placeholder="" title="Who is your current payment processing service provider?" class="choicesuni"></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_734-D" role="group" aria-labelledby="tfa_734-L">
+            <div class="adjust" style="float: left;"><label id="tfa_734-L" for="tfa_734" class="label preField preprefield">Are you interested in receiving a free, customized cost-comparison analysis?&nbsp;</label></div>
+            <div class="form-element">
+                <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_735" class="" id="tfa_735" name="tfa_734" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_735-L" for="tfa_735">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_736-L" for="tfa_735">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+            </div>
+            <!--<div class="inputWrapper"><span id="tfa_734" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_735" class="" id="tfa_735" name="tfa_734"><label class="label postField" id="tfa_735-L" for="tfa_735">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_736" class="" id="tfa_736" name="tfa_734"><label class="label postField" id="tfa_736-L" for="tfa_736">No</label></span></span>
+                                    </div>-->
+        </div>
+        <div id="tfa_858" class="section inline group">
+            <div class="oneField field-container-D    " id="tfa_741-D" role="group" aria-labelledby="tfa_741-L">
+                <div class="adjust" style="float: left;"><label id="tfa_741-L" for="tfa_741" class="label preField preprefield ">Are you in a contract?</label></div>
+                <div class="form-element">
+                    <label class="checkbox_toggle">
+                                                        <span id="tfa_5" class="choices vertical ">
+                                                            <span class="oneChoice">
+                                                                <input type="checkbox" value="tfa_742" class="" id="tfa_742" name="tfa_741" data-conditionals="#tfa_745" aria-describedby = "toggle-desc" value= "on">
+                                                                <span id = "toggle-desc" class="slds-checkbox_faux_container" aria-live = "assertive">
+                                                                <span class = "slds-checkbox_faux"></span>
+                                            <span class="slds-checkbox_on" id="tfa_742-L" for="tfa_742">Yes</span>
+                                            <span class="slds-checkbox_off" id="tfa_743-L" for="tfa_742">No</span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </label>
+                </div>
+                <!--<div class="inputWrapper"><span id="tfa_741" class="choices horizontal "><span class="oneChoice"><input type="radio" value="tfa_742" class="" id="tfa_742" name="tfa_741" data-conditionals="#tfa_745"><label class="label postField" id="tfa_742-L" for="tfa_742">Yes</label></span><span class="oneChoice"><input type="radio" value="tfa_743" class="" id="tfa_743" name="tfa_741"><label class="label postField" id="tfa_743-L" for="tfa_743">No</label></span></span>
+                                        </div>-->
+            </div>
+            <div class="oneField field-container-D " id="tfa_745-D" style="margin-top: 0px!important; ">
+                <label id="tfa_745-L" for="tfa_745" class="label preField ">When does your contract end?</label><br>
+                <div class="inputWrapper"><input type="text" id="tfa_745" name="tfa_745" value="" placeholder="" data-condition="`#tfa_742`" title="When does your contract end?" class="choicesuni"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="actions" id="tfa_0-A"><input type="submit" class="primaryAction" id="submit_button" value="Submit Survey"></div>
+    <div style="clear:both"></div>
+    <input type="hidden" value="36" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="0d83cb5f917b23b32495695576cdbc46" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="120" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+    </form>
+    </div>
+    </div>
+
+    <p class="supportInfo">
+        <a href="https://acn.tfaforms.net/forms/help/36" target="new" style="font-size: 0.7em;">
+      Need assistance with this form?    </a>
+
+    </p>
+
+    </div>
+    </div>
+
+    <script src='https://acn.tfaforms.net/js/iframe_resize_helper_internal.js'></script>
+
+</body>
+
+</html>
